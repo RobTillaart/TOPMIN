@@ -3,7 +3,7 @@
 //  AUTHOR: Rob Tillaart
 //    DATE: 2023-05-18
 // PURPOSE: unit tests for the TOPMIN library
-//          https://github.com/RobTillaart/TOPTOPMIN
+//          https://github.com/RobTillaart/TOPMIN
 //          https://github.com/Arduino-CI/arduino_ci/blob/master/REFERENCE.md
 //
 
@@ -49,7 +49,7 @@ unittest_teardown()
 }
 
 
-unittest(constructor)
+unittest(test_constructor)
 {
   TOPMIN tm(5);
   assertEqual(5, tm.size());
@@ -57,7 +57,7 @@ unittest(constructor)
 }
 
 
-unittest(add)
+unittest(test_add)
 {
   TOPMIN tm(5);
   assertEqual(5, tm.size());
@@ -72,6 +72,44 @@ unittest(add)
     assertEqual(5, tm.count());
     tm.add(i);
   }
+}
+
+
+unittest(test_get)
+{
+  TOPMIN tm(5);
+  assertEqual(5, tm.size());
+
+  for (int i = 10; i > 0; i--)
+  {
+    tm.add(i);
+    int idx = tm.count();
+    assertEqualFloat(i, tm.get(idx - 1), 0.001);
+  }
+
+  for (int i = 0; i < tm.count(); i++)
+  {
+    fprintf(stderr, "%f\t", tm.get(i));
+  }
+
+  fprintf(stderr, "\n");
+}
+
+
+unittest(test_reset)
+{
+  TOPMIN tm(5);
+  assertEqual(5, tm.size());
+  assertEqual(0, tm.count());
+
+  for (int i = 0; i < 5; i++)
+  {
+    tm.add(i);
+  }
+  assertEqual(5, tm.count());
+
+  tm.reset();
+  assertEqual(0, tm.count());
 }
 
 
