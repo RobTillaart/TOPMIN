@@ -40,7 +40,7 @@
 
 unittest_setup()
 {
-  fprintf(stderr, "TOPMAX_LIB_VERSION: %s\n", (char *) TOPMAX_LIB_VERSION);
+  fprintf(stderr, "TOPMIN_LIB_VERSION: %s\n", (char *) TOPMIN_LIB_VERSION);
 }
 
 
