@@ -95,9 +95,9 @@ with a single value e.g. 0. (tag idem).
 
 - add unit tests.
 - add more examples.
+  - example creative use of tag field.
 - add performance measurements.
   - depends on size / and inserted values.
-
 
 #### Could
 
@@ -105,9 +105,10 @@ with a single value e.g. 0. (tag idem).
 - **bool check(float value)** and **bool check(float value, uint32_t tag)**
   - if (value < getValue(0)) or so.
   - checks if this value would be added to the TOP-N
-
+- **TOP** class, in which the condition can be set as parameter.
+  - a function() returning true or false when comparing 2 values. 
 
 #### Wont
 
-- how to handle double/triple etc entries with same value
-  - now they are handled unique, that is what I had in mind. 
+- how to handle double/triple etc. entries with same value
+  - they are handled as unique elements, that is what I had in mind.
