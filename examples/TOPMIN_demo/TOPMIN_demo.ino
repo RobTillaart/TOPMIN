@@ -35,7 +35,7 @@ void loop()
   Serial.print("\t");
   for (int i = 0; i < tm.count(); i++)
   {
-    Serial.print(tm.get(i));
+    Serial.print(tm.getValue(i));
     Serial.print("\t");
   }
   Serial.println();
@@ -47,4 +47,3 @@ void loop()
 
 
 //  -- END OF FILE --
-

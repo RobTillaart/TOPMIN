@@ -90,14 +90,21 @@ with a single value e.g. 0. (tag idem).
 
 - keep functional in sync with TOPMAX.
 - improve documentation.
+- 0.2.0 
+  - reverse **getValue() / getTag()** be
+  - index = 0 must be the absolute minima (maxima).
+  - if you change size of TOPMIN object the "winner" gets a different index
+  - better would be to have to reverse ```index = count() - index```
+  - then less code adaptions are needed. 
 
 #### Should
 
 - add unit tests.
+  - for the TOPMINext version if possible
 - add more examples.
   - example creative use of tag field.
-- add performance measurements.
-  - depends on size / and inserted values.
+  - example performance measurements (depends on size + inserted values).
+    (Marsaglia PRNG, to be repeatable over platforms).
 
 #### Could
 
@@ -107,6 +114,8 @@ with a single value e.g. 0. (tag idem).
   - checks if this value would be added to the TOP-N
 - **TOP** class, in which the condition can be set as parameter.
   - a function() returning true or false when comparing 2 values. 
+
+
 
 #### Wont
 
