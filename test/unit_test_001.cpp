@@ -96,7 +96,7 @@ unittest(test_getValue_I)
 
 unittest(test_getValue_II)
 {
-  TOPMAX tm(5);
+  TOPMIN tm(5);
   assertEqual(5, tm.size());
 
   for (int i = 0; i < 10; i++)
