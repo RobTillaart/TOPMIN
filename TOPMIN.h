@@ -8,10 +8,10 @@
 //     URL: https://github.com/RobTillaart/TOPMIN
 
 
-#define TOPMIN_LIB_VERSION             (F("0.2.0"))
-
-
 #include "Arduino.h"
+
+
+#define TOPMIN_LIB_VERSION             (F("0.2.0"))
 
 
 class TOPMIN

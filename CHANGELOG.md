@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.2.0] - 2023-06-16
 - breaking change!
   - reverses the order of the minima when requested.
-  - results in the top one always has index 0
+  - results in the top one always have index 0
   - top position is independent of the size of the TOPMIN object.
 - fix boundary bug  **getValue() / getTag()** (index >= count).
 - add allocation checks.

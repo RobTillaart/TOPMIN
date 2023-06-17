@@ -10,7 +10,6 @@
 
 Arduino library to track the top N minima.
 
-
 ## Description
 
 This experimental library tracks the top N minima of a series of values. 
